@@ -6,7 +6,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://crud-mern-stack-frontend.vercel.app"],
+    origin: ["https://crud-mern-stack-frontend.vercel.app/"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
