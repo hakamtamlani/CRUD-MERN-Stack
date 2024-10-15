@@ -5,7 +5,7 @@ const cors = require("cors");
 app.use(cors(
   {
     origin: ['https://crud-mern-stack-frontend.vercel.app/'],
-    method: ["POST","GET"],
+    methods: ["POST","GET"],
     Credentials: true
   }
 ));
