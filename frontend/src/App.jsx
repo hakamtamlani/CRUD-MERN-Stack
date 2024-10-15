@@ -24,8 +24,7 @@ function App() {
     }
     try {
       const response = await axios.post(
-        "http://localhost:3000/create",
-        newUser
+        "https://crud-mern-stack-api-gamma.vercel.app/create", newUser
       );
       console.log("User created:", response.data);
       fetchUsers(); 
@@ -39,8 +38,8 @@ function App() {
   const updateUser = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:3000/update/${editingUserId}`,
-        newUser
+        `https://crud-mern-stack-api-gamma.vercel.app/update/${editingUserId}`,
+      newUser
       );
       console.log("User updated:", response.data);
       fetchUsers();
@@ -54,7 +53,7 @@ function App() {
   // DELETE: Delete a user
   const deleteUser = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/delete/${id}`);
+      const response = await axios.delete(`https://crud-mern-stack-api-gamma.vercel.app/delete/${id}``);
       console.log("User deleted:", response.data);
       fetchUsers();
     } catch (error) {
