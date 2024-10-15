@@ -2,15 +2,17 @@ const express = require("express");
 const app = express();
 const userModel = require("./model/userModel");
 const cors = require("cors");
-app.use(cors(
-  {
-    origin: ['https://crud-mern-stack-frontend.vercel.app/'],
-    methods: ["POST","GET"],
-    Credentials: true
-  }
-));
-
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: ["https://crud-mern-stack-frontend.vercel.app"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
+
 
 app.get("/", (req, res) => {
   res.send("server is running");
